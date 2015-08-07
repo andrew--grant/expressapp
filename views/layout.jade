@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/styles.css')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+    body
+        .container-fluid
+            .row
+                .col-md-12
+                    nav navigation here
+            .row
+                block content
+            .row
+                .col-md-12
+                    footer
+                        a(href="/") Home |
+                        a(href="/tweets") Tweets |
+                        a(href="/users") Users

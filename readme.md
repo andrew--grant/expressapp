@@ -1,0 +1,1 @@
+start nodemon without calling 'start' directly
