@@ -11,7 +11,7 @@ Tweets.prototype.getTwitterClient = function () {
     });
 };
 
-Tweets.prototype.getTweets = function (screenname,callback) {
+Tweets.prototype.getTweets = function (screenname, callback) {
     var client = this.getTwitterClient();
     var params = {screen_name: screenname};
     client.get('statuses/user_timeline', params, function (error, tweets, response) {
@@ -28,7 +28,12 @@ Tweets.prototype.getTweets = function (screenname,callback) {
             // link up hash tags
             tweet.text = tweet.text.replace(/#\w+/g, function (m) {
                 return "<a href='https://twitter.com/hashtag/" + m.substring(1) + "?src=hash' target='_blank'>" + m + "</a>";
-            });// https://twitter.com/hashtag/CID234?src=hash
+            });
+
+            tweet.text +=
+            tweet.entities.media != undefined ?
+                "<img src='" + tweet.entities.media[0].media_url + "'/>"
+                : "bbb";
         }
         callback(tweets);
     });

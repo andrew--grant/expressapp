@@ -1,0 +1,39 @@
+$susy: (
+        columns: 12,
+        gutters: .25,
+        container: 100%
+);
+
+.container {
+  @include container;
+}
+
+nav{
+  @include span(12 last);
+
+}
+
+section{
+  @include span(12 last);
+
+}
+
+
+article{
+  @include span(12 last);
+  @include susy-breakpoint(720px) {
+    @include span(8);
+  }
+}
+
+aside{
+  @include span(12 last);
+  @include susy-breakpoint(720px) {
+    @include span(4 last);
+  }
+
+}
+
+footer{
+  @include span(12 last);
+}

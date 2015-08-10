@@ -2,7 +2,12 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  .call-to-action Welcome to #{title}
+  .call-to-action Welcome to #{title}
+  .call-to-action Welcome to #{title}
+   .demo-buttons
+      a.btn.btn-default(href='#', role='button') Link
+      button.btn.btn-default(type='submit') Button
+      input.btn.btn-default(type='button', value='Input')
+      input.btn.btn-default(type='submit', value='Submit')
 
-block nav
-  #nav navigation

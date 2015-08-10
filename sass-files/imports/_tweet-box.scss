@@ -1,10 +1,27 @@
+.tweet-box-container {
 
-.tweet-box {
-  background-color: #e7f4f9;
-  min-height: 200px;
-  width: 350px;
-  float: left;
-  padding: 10px;
-  margin: 5px;
-  @include border-radius(6px);
+  margin: auto;
+
+  .tweet-box {
+    word-wrap: break-word;
+    background-color: wheat;
+    padding:7px;
+    @include border-radius($border-radius);
+    margin-bottom: gutter() / 2;
+    @include gallery(4 of 8);
+    @include susy-breakpoint(720px) {
+      @include gallery(2 of 8);
+    }
+
+    a {
+      color: $link-color;
+      text-decoration: none;
+    }
+
+    img{
+      width:40%;
+
+    }
+  }
+
 }
